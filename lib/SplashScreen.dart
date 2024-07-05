@@ -14,7 +14,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(const Duration(seconds: 5), () {Navigator.push(context,MaterialPageRoute(builder: (context) => Whatsapp(),));});
+    Timer(const Duration(seconds: 5), () {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Whatsapp(),
+          ));
+    });
   }
 
   @override
@@ -25,12 +31,16 @@ class _SplashScreenState extends State<SplashScreen> {
         children: const [
           Center(
             child: SizedBox(
-              height: 150,
+                height: 150,
                 child: Image(
                     image: NetworkImage(
                         'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/479px-WhatsApp.svg.png'))),
           ),
-          Text('WHATSAPP',style: TextStyle(fontSize: 30,decoration: TextDecoration.underline),)
+          Text(
+            'WhatsApp',
+            style:
+                TextStyle(fontSize: 30, decoration: TextDecoration.underline),
+          )
         ],
       ),
     );
